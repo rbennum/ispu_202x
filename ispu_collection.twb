@@ -1,0 +1,731 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='ispu_2020' inline='true' name='federated.05hfbmr0p54cv212fr2lq1uvvqqu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ispu_2020' name='textscan.1huvsef1res9fi1ao3p480vmlk4a'>
+            <connection class='textscan' directory='/Users/bening/Courses/Pacmann.io/Classes/Data_Visualization_with_Tableau' filename='ispu_2020.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='ispu_2022' name='textscan.0m0bc0719r224e155u9h10mm3uqq'>
+            <connection class='textscan' directory='/Users/bening/Courses/Pacmann.io/Classes/Data_Visualization_with_Tableau' filename='ispu_2022.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='ispu_2023' name='textscan.0drn1z20c7se0t1f0qx9v1kzym92'>
+            <connection class='textscan' directory='/Users/bening/Courses/Pacmann.io/Classes/Data_Visualization_with_Tableau' filename='ispu_2023.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation all='true' name='Union' type='union'>
+          <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+            <column datatype='integer' name='periode_data' />
+            <column datatype='date' name='tanggal' />
+            <column datatype='integer' name='pm10' />
+            <column datatype='integer' name='so2' />
+            <column datatype='integer' name='co' />
+            <column datatype='integer' name='o3' />
+            <column datatype='integer' name='no2' />
+            <column datatype='integer' name='max' />
+            <column datatype='string' name='critical' />
+            <column datatype='string' name='categori' />
+            <column datatype='string' name='lokasi_spku' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='textscan.0drn1z20c7se0t1f0qx9v1kzym92' name='ispu_2020.csv' table='[ispu_2020#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+              <column datatype='integer' name='periode_data' ordinal='0' />
+              <column datatype='date' name='tanggal' ordinal='1' />
+              <column datatype='integer' name='pm10' ordinal='2' />
+              <column datatype='integer' name='so2' ordinal='3' />
+              <column datatype='integer' name='co' ordinal='4' />
+              <column datatype='integer' name='o3' ordinal='5' />
+              <column datatype='integer' name='no2' ordinal='6' />
+              <column datatype='integer' name='max' ordinal='7' />
+              <column datatype='string' name='critical' ordinal='8' />
+              <column datatype='string' name='categori' ordinal='9' />
+              <column datatype='string' name='lokasi_spku' ordinal='10' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Union]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rp&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ID&quot;</attribute>
+              <attribute datatype='string' name='record-delimiter'>&quot;\\r&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>periode_data</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[periode_data]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>periode_data</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tanggal</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[tanggal]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>tanggal</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pm10</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pm10]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>pm10</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>so2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[so2]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>so2</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>co</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[co]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>co</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>o3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[o3]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>o3</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>no2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[no2]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>no2</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[max]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>max</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>critical</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[critical]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>critical</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>categori</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[categori]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>categori</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lokasi_spku</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lokasi_spku]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>lokasi_spku</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Union' datatype='table' name='[__tableau_internal_object_id__].[_CE2E818839B7453D95E7692B0CC0DDB0]' role='measure' type='quantitative' />
+      <column caption='Categori' datatype='string' name='[categori]' role='dimension' type='nominal' />
+      <column caption='Co' datatype='integer' name='[co]' role='measure' type='quantitative' />
+      <column caption='Lokasi Spku' datatype='string' name='[lokasi_spku]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/34/_j3kcpxd38lfbdvtp0clnhrw0000gn/T/tableau-temp/#TableauTemp_11supuc1vpgdtz16vayh00j361gc.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/27/2025 05:54:55 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>periode_data</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[periode_data]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>periode_data</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tanggal</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[tanggal]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tanggal</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Union</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>365</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pm10</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pm10]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pm10</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>so2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[so2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>so2</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>46</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>co</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[co]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>co</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>o3</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[o3]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>o3</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>123</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>no2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[no2]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>no2</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>max</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[max]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>max</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Union</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>102</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>critical</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[critical]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>critical</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>categori</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[categori]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>categori</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lokasi_spku</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[lokasi_spku]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lokasi_spku</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Table Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Table Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Table Name</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Union</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[_CE2E818839B7453D95E7692B0CC0DDB0]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Union' id='_CE2E818839B7453D95E7692B0CC0DDB0'>
+            <properties context=''>
+              <relation all='true' name='Union' type='union'>
+                <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+                  <column datatype='integer' name='periode_data' />
+                  <column datatype='date' name='tanggal' />
+                  <column datatype='integer' name='pm10' />
+                  <column datatype='integer' name='so2' />
+                  <column datatype='integer' name='co' />
+                  <column datatype='integer' name='o3' />
+                  <column datatype='integer' name='no2' />
+                  <column datatype='integer' name='max' />
+                  <column datatype='string' name='critical' />
+                  <column datatype='string' name='categori' />
+                  <column datatype='string' name='lokasi_spku' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='textscan.0drn1z20c7se0t1f0qx9v1kzym92' name='ispu_2020.csv' table='[ispu_2020#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+                    <column datatype='integer' name='periode_data' ordinal='0' />
+                    <column datatype='date' name='tanggal' ordinal='1' />
+                    <column datatype='integer' name='pm10' ordinal='2' />
+                    <column datatype='integer' name='so2' ordinal='3' />
+                    <column datatype='integer' name='co' ordinal='4' />
+                    <column datatype='integer' name='o3' ordinal='5' />
+                    <column datatype='integer' name='no2' ordinal='6' />
+                    <column datatype='integer' name='max' ordinal='7' />
+                    <column datatype='string' name='critical' ordinal='8' />
+                    <column datatype='string' name='categori' ordinal='9' />
+                    <column datatype='string' name='lokasi_spku' ordinal='10' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ispu_2020' name='federated.05hfbmr0p54cv212fr2lq1uvvqqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05hfbmr0p54cv212fr2lq1uvvqqu'>
+            <column-instance column='[co]' derivation='Avg' name='[avg:co:qk]' pivot='key' type='quantitative' />
+            <column caption='Categori' datatype='string' name='[categori]' role='dimension' type='nominal' />
+            <column caption='Co' datatype='integer' name='[co]' role='measure' type='quantitative' />
+            <column caption='Lokasi Spku' datatype='string' name='[lokasi_spku]' role='dimension' type='nominal' />
+            <column-instance column='[categori]' derivation='None' name='[none:categori:nk]' pivot='key' type='nominal' />
+            <column-instance column='[lokasi_spku]' derivation='None' name='[none:lokasi_spku:nk]' pivot='key' type='nominal' />
+            <column-instance column='[co]' derivation='Sum' name='[sum:co:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[none:categori:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:categori:nk]' />
+              <groupfilter function='member' level='[none:categori:nk]' member='&quot;O3&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[none:lokasi_spku:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[sum:co:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[none:categori:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[none:lokasi_spku:nk]' value='22' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[none:categori:nk]' value='183' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[avg:co:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[avg:co:qk]</rows>
+        <cols>[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[none:lokasi_spku:nk]</cols>
+      </table>
+      <simple-id uuid='{32C817C5-2CBD-43BA-A6B0-883A1DD0DF29}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[none:categori:nk]</field>
+            <field>[federated.05hfbmr0p54cv212fr2lq1uvvqqu].[none:lokasi_spku:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9525325F-8E9A-4815-BF02-49C3CDF81B96}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAftklEQVR4nO3deXBV9eH38c85dyMhCRAoAiHEoKyjqEVZSt1GW6YFrFPqdGrrjLYutbWL
+      OtOOz/Q3HW2rT1uXWtup1vobR+u0pcVxfFQYQJawKIs+gkgShCQsCQRCFi653OUszx883inV
+      +Zmb3HMvyff9+sdEbs73e+83575zzt0s3/d9AQCMYxd7AgCA4iAAAGAoAgAAhiIAAGAoAgAA
+      hiIAAGAoAgAAOVi/fr3i8fgn/tvTTz/dp208++yz+ugZ+C0tLXr88cf13HPPKZlMnnW5/fv3
+      a9WqVQOb8P8gHNiWAWAI2rp1q6ZPn67y8nLF43GtWLFC1dXVmj9/vg4ePKhkMqn3339fVVVV
+      2rx5s6qqqjR//nxt2LBBXV1duv766zVt2rTs9v785z/r9ttv1+nTp5VKpbRt2za1t7fr8ssv
+      VyKRUEdHhw4dOiTHcdTZ2anZs2fr3Xff1aWXXirbHtjf8BwBAEA/Pfvssxo3bpzWrFmj/fv3
+      y3EcPfPMM7IsS729vaqqqtLzzz+vffv26eWXX1ZVVZVSqZRee+01WZYlSZo/f76eeOIJ7d+/
+      X5ZladmyZZo6daqefPJJ+b6vzs5OPf300xoxYoSWL18uSVq+fLk8zxvw/AkAAPRTV1eXrrji
+      Cl188cU6evSojh49qoaGBs2cOVNvvfWW9uzZo0gkorKyMl1zzTVavny5jhw5ctY2Fi5cqIcf
+      fljvvvuu9u7dq/POO0+zZs1SNBqV53nasmWLxo4dq4qKCuX7jRs4BQQAOQiHw/rtb3+rKVOm
+      aP78+Xr44Yd16tQpPfjgg6qtrdWNN96oP/3pT4pEIurt7c2exmloaJAkOY6jSCSS3d5TTz2l
+      np4enTx5UuPGjVNjY6MeeughTZ06VZFIRF/5ylfU09OjjRs3Kp1O61e/+pVOnDiRl+ti8V5A
+      ANB/iURCsVhMoVDorP/veZ5SqZRKSkokSel0Wp7nadiwYR/bRjKZVCwWUyKR0OOPP66f/vSn
+      ikajH7uc4zhyHOcTt9EfBAAAzhGu6+ro0aOqqqoqyHhFDYDneQN+FBsA0D9Fvffl4AMAioc/
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
